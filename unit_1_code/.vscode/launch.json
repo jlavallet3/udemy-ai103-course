@@ -12,8 +12,8 @@
             "console": "integratedTerminal",
             "python": "tutorials/Scripts/python.exe",
             "env": {
-                "OPENAI_ENDPOINT": "https://courseunit696.services.ai.azure.com/openai/v1",
-                "MODEL_DEPLOYMENT_NAME": "courseunit696-llm-deploy",
+                "OPENAI_ENDPOINT": "https://courseunit1971.services.ai.azure.com/openai/v1",
+                "MODEL_DEPLOYMENT_NAME": "courseunit1971-llm-deploy",
             }
         },
     ]
