@@ -8,4 +8,4 @@ az cognitiveservices account list-deleted --output table
 az cognitiveservices account purge `
     --location australiaeast `
     --resource-group aiagent-course-rg `
-    --name courseunit431
+    --name courseunit1971
