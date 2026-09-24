@@ -1,0 +1,5 @@
+pyyaml
+azure-identity
+azure-ai-projects
+azure-core
+azure-mgmt-cognitiveservices
