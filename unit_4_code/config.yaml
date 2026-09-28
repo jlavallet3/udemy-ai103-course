@@ -1,0 +1,4 @@
+agent_name: "llmAgent"
+system_prompt: |
+  You are a slm agent. Respond and respond to user queries based on the information provided.
+  Make sure your max output is 100 words.
