@@ -30,6 +30,8 @@ resource aiFoundry 'Microsoft.CognitiveServices/accounts@2026-05-01' = {
     customSubDomainName: aiFoundryName
 
     disableLocalAuth: false
+    
+    publicNetworkAccess: 'Enabled'
   }
 }
 
@@ -101,8 +103,9 @@ resource searchService 'Microsoft.Search/searchServices@2025-05-01' = {
   properties: {
     replicaCount: 1
     partitionCount: 1
-    hostingMode: 'default'
+    hostingMode: 'Default'
     disableLocalAuth: true
+    publicNetworkAccess: 'Enabled'
   }
 }
 
