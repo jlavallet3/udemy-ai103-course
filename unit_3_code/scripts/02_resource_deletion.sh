@@ -6,6 +6,6 @@ az group delete --name aiagent-course-rg --yes;
 
 # The following commands permanently delete the soft-deleted accounts.
 az cognitiveservices account purge `
-    --location australiaeast `
+    --location eastus `
     --resource-group aiagent-course-rg `
-    --name courseunit476;
+    --name courseunit1971;
