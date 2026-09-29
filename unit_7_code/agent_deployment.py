@@ -8,6 +8,12 @@ from azure.ai.projects import AIProjectClient
 from azure.ai.projects.models import PromptAgentDefinition
 from azure.core.exceptions import HttpResponseError
 
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("azure").setLevel(logging.DEBUG)
+
+
 # =============================================================================
 # CONFIGURATION
 # =============================================================================
