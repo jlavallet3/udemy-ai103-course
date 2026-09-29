@@ -1,0 +1,6 @@
+pyyaml
+azure-identity
+azure-ai-projects
+azure-core
+agent-framework
+agent-framework-foundry
