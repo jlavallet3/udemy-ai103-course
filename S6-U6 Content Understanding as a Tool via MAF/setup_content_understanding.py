@@ -17,13 +17,13 @@ def main() -> int:
     )
 
     model_deployments = {
-        "gpt-4.1": "courseunit647-llm-deploy",  # Maps the invoice/complex prebuilt requirement
-        "gpt-4.1-mini": "courseunit647-llm-deploy",  # Maps the image/read/voice prebuilt requirement
-        "text-embedding-3-large": "courseunit647-embedding-deploy",  # Maps the embedding prebuilt requirement
+        "gpt-4.1": "courseunit1984-llm-deploy",  # Maps the invoice/complex prebuilt requirement
+        "gpt-4.1-mini": "courseunit1984-llm-deploy",  # Maps the image/read/voice prebuilt requirement
+        "text-embedding-3-large": "courseunit1984-embedding-deploy",  # Maps the embedding prebuilt requirement
     }
     # model_deployments = {
-    #     "gpt-5-mini": "courseunit647-llm-deploy",  # Maps the invoice/complex prebuilt requirement
-    #     "text-embedding-3-large": "courseunit647-embedding-deploy",  # Maps the embedding prebuilt requirement
+    #     "gpt-5-mini": "courseunit1984-llm-deploy",  # Maps the invoice/complex prebuilt requirement
+    #     "text-embedding-3-large": "courseunit1984-embedding-deploy",  # Maps the embedding prebuilt requirement
     # }
 
     print("Updating default model deployment mappings...")
