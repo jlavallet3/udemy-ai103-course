@@ -1,13 +1,13 @@
 # First, create a resource group (if you haven't already)
 az group create `
 --name aiagent-course-rg `
---location australiaeast
+--location eastus
 
 # Deploy the Bicep file
 az deployment group create `
 --resource-group aiagent-course-rg `
 --template-file resource_deployment.bicep `
---parameters coursePrefix=courseunit631
+--parameters coursePrefix=courseunit1979
 
 # Get your deployment outputs
 az deployment group show `

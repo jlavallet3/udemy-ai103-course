@@ -32,7 +32,7 @@ class AzureVisionService:
             result = self.vision_client.analyze(
                 image_data=image_data,
                 visual_features=[
-                    # VisualFeatures.CAPTION, # Not available in the current SDK version for australiaeast region
+                    VisualFeatures.CAPTION, # Not available in the current SDK version for australiaeast region
                     VisualFeatures.READ,
                     VisualFeatures.TAGS,
                 ],
