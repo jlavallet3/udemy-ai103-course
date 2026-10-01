@@ -1,0 +1,4 @@
+agent_name: "basicAgent"
+system_prompt: |
+  You are a basic agent. Respond and respond to user queries based on the information provided.
+  Make sure your max output is 100 words.
