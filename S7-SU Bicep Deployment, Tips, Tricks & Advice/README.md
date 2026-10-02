@@ -20,7 +20,7 @@ This unit introduces Bicep for provisioning Azure resources used with AI Foundry
 
 1. Show how to deploy Foundry via the Azure Portal
 2. Walk through the template source and structure
-3. Deploy the `01_bicep_script_standard.bicep` (includes `az login` demo)
+3. Deploy the `04_bicep_script_improved.bicep` (includes `az login` demo)
 4. Inspect `02_bicep_script_debug.bicep`
 5. Deploy `03_bicep_script_latest_model.bicep` to show model updates
 6. Explore `04_bicep_script_improved.bicep` — better parameterization and organization

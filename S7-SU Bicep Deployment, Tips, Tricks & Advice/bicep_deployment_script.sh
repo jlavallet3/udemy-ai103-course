@@ -2,21 +2,21 @@
 az login
 
 # First, create a resource group (if you haven't already)
-az group create --name aiagent-course-rg --location australiaeast
+az group create --name aiagent-course-rg --location eastus
 
 # Convert the Bicep file to an ARM template (optional, for verification)
-az bicep build --file 01_bicep_script_standard.bicep
+az bicep build --file 04_bicep_script_improved.bicep
 
 # Deploy the Bicep file
 az deployment group create `
     --resource-group aiagent-course-rg `
-    --template-file 01_bicep_script_standard.bicep `
-    --parameters coursePrefix=unit123course
+    --template-file 04_bicep_script_improved.bicep `
+    --parameters coursePrefix=unit1986course
 
 # Get your deployment outputs
 az deployment group show `
     --resource-group aiagent-course-rg `
-    --name 01_bicep_script_standard `
+    --name 04_bicep_script_improved `
     --query properties.outputs
 
 # Delete the entire deployment (So no more costs)
@@ -32,11 +32,11 @@ az cognitiveservices account list-deleted --output table
 
 # The following commands permanently delete the soft-deleted accounts.
 az cognitiveservices account purge `
-    --location australiaeast `
+    --location eastus `
     --resource-group aiagent-course-rg `
     --name foundrycourse1;
 
 az cognitiveservices account purge `
-    --location australiaeast `
+    --location eastus `
     --resource-group aiagent-course-rg `
-    --name unit123course;
+    --name unit1986course;
