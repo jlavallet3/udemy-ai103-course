@@ -29,6 +29,7 @@ resource aiFoundry 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
     customSubDomainName: aiFoundryName
 
     disableLocalAuth: false
+    publicNetworkAccess: 'Enabled'
   }
 }
 
@@ -124,6 +125,7 @@ resource contentSafety 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   properties: {
     customSubDomainName: contentSafetyName
     disableLocalAuth: false
+    publicNetworkAccess: 'Enabled'
   }
 }
 
