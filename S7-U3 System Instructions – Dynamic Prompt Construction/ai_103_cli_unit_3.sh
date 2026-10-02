@@ -1,8 +1,8 @@
 # First, create a resource group (if you haven't already)
-az group create --name aiagent-course-rg --location australiaeast
+az group create --name aiagent-course-rg --location eastus
 
 # Deploy the Bicep file
-az deployment group create --resource-group aiagent-course-rg --template-file ai_103_bicep_unit_3.bicep --parameters coursePrefix=unit3course
+az deployment group create --resource-group aiagent-course-rg --template-file ai_103_bicep_unit_3.bicep --parameters coursePrefix=unit3course1988
 
 # Get your deployment outputs
 az deployment group show --resource-group aiagent-course-rg --name ai_103_bicep_unit_3 --query properties.outputs
@@ -17,5 +17,11 @@ az group list --output table
 az cognitiveservices account list-deleted --output table
 
 # The following commands permanently delete the soft-deleted accounts.
-az cognitiveservices account purge --location australiaeast --resource-group aiagent-course-rg --name unit3course
-az cognitiveservices account purge --location australiaeast --resource-group aiagent-course-rg --name unit3course-csafety
+az cognitiveservices account purge --location eastus --resource-group aiagent-course-rg --name unit3course1988
+az cognitiveservices account purge --location eastus --resource-group aiagent-course-rg --name unit3course1988-csafety
+
+# Deactivate the virtual environment
+deactivate
+
+# Remove The Virtual Environment
+Remove-Item tutorials -Recurse -Force

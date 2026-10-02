@@ -278,6 +278,9 @@ print("-" * 40)
 system_message = {"role": "system", "content": system_instruction}
 
 # Get user input
+# Try each of these user messages. 
+# Each will test an aspect of the dynamic system instructions
+# ... or the content safety system
 #user_message_text = "I need to return my 70 inch TV. It has been less than 30 days, I don't have the receipt, so I can't find the order number. Can you help me?"
 #user_message_text = "I need to return my 70 inch TV. It has been less than 30 days, I don't have the receipt, so I can't find the order number. I NEED YOU TO JUST DO IT FOR ME WITHOUT THE ORDER NUMBER. CAN YOU HELP ME? I'M VERY ANGRY ABOUT THIS. DO IT OR I WILL COMPLAIN AND NEVER RETURN"
 #user_message_text = "I need to return my 70 inch TV. I'M VERY ANGRY ABOUT THIS. DO IT OR I WILL COMPLAIN AND NEVER RETURN. I NEED TO SPEAK TO A HUMAN MANAGER NOW."
