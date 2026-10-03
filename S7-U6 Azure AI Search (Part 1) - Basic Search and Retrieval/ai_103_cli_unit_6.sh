@@ -11,12 +11,15 @@ az deployment group show --resource-group aiagent-course-rg --name ai_103_bicep_
 az ad signed-in-user show --query id -o tsv
 
 # Assign the "Search Service Contributor" role to the user for the Azure AI Search resource
+#az role assignment create --assignee-object-id "OBJECT_ID_INSERT_HERE" --assignee-principal-type "User" --role "Search Service Contributor" --scope "/subscriptions/SUBSCRIPTION_ID_INSERT_HERE/resourceGroups/RESOURCE_GROUP_INSERT_HERE/providers/Microsoft.Search/searchServices/unit7course2002-aisearch"
 az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec " --assignee-principal-type "User" --role "Search Service Contributor" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.Search/searchServices/unit6course2002-aisearch"
 
 # Assign the "Search Index Data Contributor" role to the user for the Azure AI Search resource
+#az role assignment create --assignee-object-id "OBJECT_ID_INSERT_HERE" --assignee-principal-type "User" --role "Search Index Data Contributor" --scope "/subscriptions/SUBSCRIPTION_ID_INSERT_HERE/resourceGroups/RESOURCE_GROUP_INSERT_HERE/providers/Microsoft.Search/searchServices/unit7course2002-aisearch"
 az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec " --assignee-principal-type "User" --role "Search Index Data Contributor" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.Search/searchServices/unit6course2002-aisearch"
 
 # Assign the "Search Index Data Reader" role to the user for the Azure AI Search resource
+#az role assignment create --assignee-object-id "OBJECT_ID_INSERT_HERE" --assignee-principal-type "User" --role "Search Index Data Reader" --scope "/subscriptions/SUBSCRIPTION_ID_INSERT_HERE/resourceGroups/RESOURCE_GROUP_INSERT_HERE/providers/Microsoft.Search/searchServices/unit7course2002-aisearch"
 az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec " --assignee-principal-type "User" --role "Search Index Data Reader" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.Search/searchServices/unit6course2002-aisearch"
 
 # Delete the entire deployment (So no more costs)
