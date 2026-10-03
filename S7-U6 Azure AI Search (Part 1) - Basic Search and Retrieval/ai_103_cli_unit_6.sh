@@ -1,8 +1,8 @@
 # First, create a resource group (if you haven't already)
-az group create --name aiagent-course-rg --location australiaeast
+az group create --name aiagent-course-rg --location eastus
 
 # Deploy the Bicep file
-az deployment group create --resource-group aiagent-course-rg --template-file ai_103_bicep_unit_6.bicep --parameters coursePrefix=unit6course
+az deployment group create --resource-group aiagent-course-rg --template-file ai_103_bicep_unit_6.bicep --parameters coursePrefix=unit6course2002
 
 # Get your deployment outputs
 az deployment group show --resource-group aiagent-course-rg --name ai_103_bicep_unit_6 --query properties.outputs
@@ -11,13 +11,13 @@ az deployment group show --resource-group aiagent-course-rg --name ai_103_bicep_
 az ad signed-in-user show --query id -o tsv
 
 # Assign the "Search Service Contributor" role to the user for the Azure AI Search resource
-az role assignment create --assignee-object-id "OBJECT_ID_INSERT_HERE" --assignee-principal-type "User" --role "Search Service Contributor" --scope "/subscriptions/SUBSCRIPTION_ID_INSERT_HERE/resourceGroups/RESOURCE_GROUP_INSERT_HERE/providers/Microsoft.Search/searchServices/unit6course-aisearch"
+az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec " --assignee-principal-type "User" --role "Search Service Contributor" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.Search/searchServices/unit6course2002-aisearch"
 
 # Assign the "Search Index Data Contributor" role to the user for the Azure AI Search resource
-az role assignment create --assignee-object-id "OBJECT_ID_INSERT_HERE" --assignee-principal-type "User" --role "Search Index Data Contributor" --scope "/subscriptions/SUBSCRIPTION_ID_INSERT_HERE/resourceGroups/RESOURCE_GROUP_INSERT_HERE/providers/Microsoft.Search/searchServices/unit6course-aisearch"
+az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec " --assignee-principal-type "User" --role "Search Index Data Contributor" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.Search/searchServices/unit6course2002-aisearch"
 
 # Assign the "Search Index Data Reader" role to the user for the Azure AI Search resource
-az role assignment create --assignee-object-id "OBJECT_ID_INSERT_HERE" --assignee-principal-type "User" --role "Search Index Data Reader" --scope "/subscriptions/SUBSCRIPTION_ID_INSERT_HERE/resourceGroups/RESOURCE_GROUP_INSERT_HERE/providers/Microsoft.Search/searchServices/unit6course-aisearch"
+az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec " --assignee-principal-type "User" --role "Search Index Data Reader" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.Search/searchServices/unit6course2002-aisearch"
 
 # Delete the entire deployment (So no more costs)
 az group delete --name aiagent-course-rg --yes --no-wait
@@ -29,4 +29,10 @@ az group list --output table
 az cognitiveservices account list-deleted --output table
 
 # The following commands permanently delete the soft-deleted accounts.
-az cognitiveservices account purge --location australiaeast --resource-group aiagent-course-rg --name unit6course
+az cognitiveservices account purge --location eastus --resource-group aiagent-course-rg --name unit6course2002
+
+# Deactivate the virtual environment
+deactivate
+
+# Remove The Virtual Environment
+Remove-Item tutorials -Recurse -Force

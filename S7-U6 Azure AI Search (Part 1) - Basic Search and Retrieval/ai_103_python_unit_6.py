@@ -190,6 +190,7 @@ def search_documents(question):
 # MAIN SCRIPT LOGIC
 # =============================================================================
 
+# user_message_text = "What are the best practices for Azure AI search?"
 user_message_text = "What is Docker?"
 
 print("=" * 60)
