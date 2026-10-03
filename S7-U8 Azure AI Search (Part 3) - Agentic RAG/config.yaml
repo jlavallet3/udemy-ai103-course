@@ -11,7 +11,7 @@ system_instructions:
 intent_classifier:
   max_tokens: 2
   temperature: 0
-  top_p: 0.0
+  top_p: 0.1
 
 llm:
   max_past_messages: 10
