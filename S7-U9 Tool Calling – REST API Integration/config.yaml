@@ -9,7 +9,7 @@ intent_classifier:
   use_slm_classifier: True
   max_tokens: 2
   temperature: 0
-  top_p: 0.0
+  top_p: 0.1
 
 llm:
   max_past_messages: 10

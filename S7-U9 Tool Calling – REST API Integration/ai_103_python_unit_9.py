@@ -75,7 +75,10 @@ model_router = ModelRouter(
 # MAIN SCRIPT LOGIC
 # =============================================================================
 
-user_message_text = "Help me with my refund of a broken TV."
+#user_message_text = "Help me with my refund of a broken TV."
+#user_message_text = "What's the Weather in Hoover AL?"
+#user_message_text = "What's the Weather in Hoover AL in Fahrenheit?"
+user_message_text = "What is 100 US dollars in euros?"
 
 # Get available tools using ToolFunctions class
 print("\n" + "=" * 60)
