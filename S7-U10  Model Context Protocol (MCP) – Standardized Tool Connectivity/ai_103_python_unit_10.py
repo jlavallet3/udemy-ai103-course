@@ -83,7 +83,9 @@ model_router = ModelRouter(
 # MAIN SCRIPT LOGIC
 # =============================================================================
 
-user_message_text = "First, what is the weather in Brisbane right now. Then help me with my refund of a broken TV."
+#user_message_text = "First, what is the weather in Brisbane right now. Then help me with my refund of a broken TV."
+#user_message_text = "What's the Weather in Hoover AL?"
+user_message_text = "Use the weather tool to determine the weather and Hoover, Alabama right now."
 
 # Input filtering (from Unit 3)
 print("\n[INPUT FILTER] Scanning user message...")
