@@ -63,26 +63,6 @@ resource llmModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@20
 }
 
 //https://ai.azure.com/catalog/models/Phi-4-mini-instruct?utm_source=chatgpt.com
-// resource slmModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01'= {
-//   parent: aiFoundry
-//   name: slmModelDeploymentName
-//   dependsOn: [
-//     llmModelDeployment  // Explicitly wait for LLM to finish first
-//   ]
-//   sku : {
-//     capacity: 1
-//     name: 'GlobalStandard'
-//   }
-//   properties: {
-//     model:{
-//       name: 'Phi-4-mini-instruct'
-//       format: 'Microsoft'
-//       version: '1'
-//     }
-//   }
-// }
-
-// If the Phi-4-mini-instruct deployment fails or the model is not responding when testing, please uncomment the below code
 resource slmModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01'= {
   parent: aiFoundry
   name: slmModelDeploymentName
@@ -95,12 +75,32 @@ resource slmModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@20
   }
   properties: {
     model:{
-      name: 'gpt-4o-mini'
-      format: 'OpenAI'
-      version: '2024-07-18'
+      name: 'Phi-4-mini-instruct'
+      format: 'Microsoft'
+      version: '1'
     }
   }
 }
+
+// If the Phi-4-mini-instruct deployment fails or the model is not responding when testing, please uncomment the below code
+// resource slmModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01'= {
+//   parent: aiFoundry
+//   name: slmModelDeploymentName
+//   dependsOn: [
+//     llmModelDeployment  // Explicitly wait for LLM to finish first
+//   ]
+//   sku : {
+//     capacity: 1
+//     name: 'GlobalStandard'
+//   }
+//   properties: {
+//     model:{
+//       name: 'gpt-4o-mini'
+//       format: 'OpenAI'
+//       version: '2024-07-18'
+//     }
+//   }
+// }
 
 /*
   Content Safety service to moderate text, images, and other content
