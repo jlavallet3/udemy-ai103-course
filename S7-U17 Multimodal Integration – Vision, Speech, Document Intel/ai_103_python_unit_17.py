@@ -93,12 +93,12 @@ basic_agent = BasicAgent(
 
 user_message_text = "What do you see in what I've uploaded?"
 
-azure_ai_service_response = azure_ai_service.route_multimodal_request(
-    content_type="jpeg", content_path="inputs/broken_tv.jpeg"
-)
 # azure_ai_service_response = azure_ai_service.route_multimodal_request(
-#     content_type="invoice", content_path="inputs/invoice_2001321.pdf"
+#     content_type="jpeg", content_path="inputs/broken_tv.jpeg"
 # )
+azure_ai_service_response = azure_ai_service.route_multimodal_request(
+    content_type="invoice", content_path="inputs/invoice_2001321.pdf"
+)
 # azure_ai_service_response = azure_ai_service.route_multimodal_request(
 #     content_type="wav", content_path="inputs/voice_recording.wav"
 # )
