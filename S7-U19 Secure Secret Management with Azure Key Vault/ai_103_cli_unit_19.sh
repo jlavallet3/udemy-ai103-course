@@ -1,8 +1,8 @@
 # First, create a resource group (if you haven't already)
-az group create --name aiagent-course-rg --location australiaeast
+az group create --name aiagent-course-rg --location eastus
 
 # Deploy the Bicep file
-az deployment group create --resource-group aiagent-course-rg --template-file ai_103_bicep_unit_19.bicep --parameters coursePrefix=unit19course
+az deployment group create --resource-group aiagent-course-rg --template-file ai_103_bicep_unit_19.bicep --parameters coursePrefix=unit19course2009
 
 # Get your deployment outputs
 az deployment group show --resource-group aiagent-course-rg --name ai_103_bicep_unit_19 --query properties.outputs
@@ -11,7 +11,7 @@ az deployment group show --resource-group aiagent-course-rg --name ai_103_bicep_
 az ad signed-in-user show --query id -o tsv
 
 # Assign the "Key Vault Secrets User" role to the user for the Key Vault resource
-az role assignment create --assignee-object-id "1c84ee91-d668-45fe-8b94-56a74ac97b03" --assignee-principal-type "User" --role "Key Vault Secrets User" --scope "/subscriptions/b4272717-b8f9-4c65-8d2e-fc113f928034/resourceGroups/aiagent-course-rg/providers/Microsoft.KeyVault/vaults/unit19course-kvault"
+az role assignment create --assignee-object-id "6dda48d7-5a3a-46f1-b216-10ba7548c7ec" --assignee-principal-type "User" --role "Key Vault Secrets User" --scope "/subscriptions/b0da5a4e-7162-4bba-9bcf-94b325b93633/resourceGroups/aiagent-course-rg/providers/Microsoft.KeyVault/vaults/unit19course2009-kvault"
 
 # Delete the entire deployment (So no more costs)
 az group delete --name aiagent-course-rg --yes --no-wait
@@ -23,15 +23,21 @@ az group list --output table
 az cognitiveservices account list-deleted --output table
 
 # The following commands permanently delete the soft-deleted accounts.
-az cognitiveservices account purge --location australiaeast --resource-group aiagent-course-rg --name unit19course
-az cognitiveservices account purge --location australiaeast --resource-group aiagent-course-rg --name unit19course-csafety
-az cognitiveservices account purge --location australiaeast --resource-group aiagent-course-rg --name unit19course-language
+az cognitiveservices account purge --location eastus --resource-group aiagent-course-rg --name unit19course2009
+az cognitiveservices account purge --location eastus --resource-group aiagent-course-rg --name unit19course2009-csafety
+az cognitiveservices account purge --location eastus --resource-group aiagent-course-rg --name unit19course2009-language
 
 # Find all soft-deleted Key Vaults in the region (to confirm deletion)
 az keyvault list-deleted
 
 # Find when the key vault will be permanently deleted (scheduled purge date)
-az keyvault list-deleted --resource-type vault --query "[?name=='unit19course-kvault'].properties.scheduledPurgeDate"
+az keyvault list-deleted --resource-type vault --query "[?name=='unit19course2009-kvault'].properties.scheduledPurgeDate"
 
 # (NO LONDER WORKERS) The following command permanently deletes the soft-deleted Key Vault.
-az keyvault purge --name unit19course-kvault --location australiaeast
+az keyvault purge --name unit19course2009-kvault --location eastus
+
+# Deactivate the virtual environment
+deactivate
+
+# Remove The Virtual Environment
+Remove-Item tutorials -Recurse -Force
